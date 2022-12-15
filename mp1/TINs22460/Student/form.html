@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Illia Solovko Dormitary DEMO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <!--Header and logo-->
+    <header>
+      <h1>Illia Solovko Dormitary DEMO</h1>
+      <img src="../../images/logo.png" alt="Illia Solovko Dormitary Demo" width="100" height="100">
+    </header>
+    
+    <!--Navigation-->
+    <nav>
+      <ul>
+        <li><a href="../index.html">Main Page</a></li>
+        <li><a href="../Teacher/list.html">Teacher</a></li>
+        <li><a href="./list.html" class="active">Student</a></li>
+        <li><a href="../Grades/list.html">Grades</a></li>
+      </ul>
+    </nav>
+    <!--Main contents-->
+    <main>
+      <h2>Add Student</h2>
+      <form class="form">
+        <label for="studentPesel">Pesel: <span class="symbol-required">*</span></label>
+        <input type="text" name="studentPesel" id="studentPesel" required>
+        <span id="errorStudentPesel" class="errors-text"></span>
+
+        <label for="FirstName">First Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="FirstName" id="FirstName" required>
+        <span id="errorFirstName" class="errors-text"></span>
+        
+        <label for="FirstName">Last Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="LastName" id="LastName" required>
+        <span id="errorLastName" class="errors-text"></span>
+
+        <label for="email">Student email: <span class="symbol-required">*</span></label>
+        <input type="email" name="email" id="email" required>
+        <span id="errorStudentEmail" class="errors-text"></span>
+        
+        <div class="form-buttons">
+            <p id="errorsSummary"></p>
+            <input type="submit" class="form-button-submit" value="Add" />
+            <a href="./list.html" class="form-button-cancel">Cancel</a>
+        </div>
+    </form>
+    </main>
+    <!--Footer-->
+    <footer>
+      Illia, Solovko, s22460
+    </footer>
+  </body>
+</html>

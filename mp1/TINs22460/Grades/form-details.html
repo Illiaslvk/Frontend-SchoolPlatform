@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Illia Solovko Dormitary DEMO</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!--Header and logo-->
+    <header>
+      <h1>Illia Solovko Dormitary DEMO</h1>
+      <img src="../../images/logo.png" alt="Illia Solovko Dormitary Demo" width="100" height="100">
+    </header>
+    
+    <!--Navigation-->
+    <nav>
+      <ul>
+        <li><a href="../index.html">Main Page</a></li>
+        <li><a href="../Teacher/list.html">Teacher</a></li>
+        <li><a href="../Student/list.html">Student</a></li>
+        <li><a href="./list.html" class="active">Grades</a></li>
+      </ul>
+    </nav>
+    <!--Main contents-->
+    <main>
+      <h2>Grade Information</h2>
+      <form class="form">
+        <label for="StudentName">StudentName: </label>
+         <select name="StudentName" id="StudentName" disabled>
+            <option value="">--StudentName--</option>
+            <option selected value="5">Vitka</option>
+        </select> 
+        <span id="errorGrade" class="errors-text"></span>
+
+        <label for="TeacherName">TeacherName: </label>
+         <select name="TeacherName" id="TeacherName" disabled>
+            <option value="">--TeacherName--</option>
+            <option selected value="5">Jamal</option>
+        </select> 
+        <span id="errorGrade" class="errors-text"></span>
+
+        <label for="PESEL">PESEL: </label>
+        <input type="text" name="PESEL" id="PESEL" value="993" disabled>
+        <span id="errorPESEL" class="errors-text"></span>
+
+        <label for="Subject">Subject: </label>
+        <input type="text" name="Subject" id="Subject" value="Math" disabled>
+        <span id="errorSubject" class="errors-text"></span>
+
+        <label for="Grade">Grade: </label>
+        <input type="text" name="Grade" id="Grade" value="5" disabled>
+        <span id="errorGrade" class="errors-text"></span>
+        
+        <div class="form-buttons">
+          <a href="./list.html" class="list-actions-button-details">Back</a>
+          <a href="./form-invalid.html" class="list-actions-button-edit">Edit</a>
+      </div>
+    </form>
+    </main>
+    <footer>
+        Illia, Solovko, s22460
+    </footer>
+  </body>
+</html>

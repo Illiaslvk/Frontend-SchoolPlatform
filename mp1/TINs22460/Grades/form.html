@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Illia Solovko Dormitary DEMO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <!--Header and logo-->
+    <header>
+      <h1>Illia Solovko Dormitary DEMO</h1>
+      <img src="../../images/logo.png" alt="Illia Solovko Dormitary Demo" width="100" height="100">
+    </header>
+    
+    <!--Navigation-->
+    <nav>
+      <ul>
+        <li><a href="../index.html">Main Page</a></li>
+        <li><a href="../Teacher/list.html">Teacher</a></li>
+        <li><a href="../Student/list.html">Student</a></li>
+        <li><a href="./list.html" class="active">Grades</a></li>
+      </ul>
+    </nav>
+    <!--Main contents-->
+    <main>
+      <h2>Add Grade</h2>
+      <form class="form">
+        <label for="dept">Students name: <span class="required-field">*</span></label>
+         <select name="Grades" id="Grades" class="symbol-required" required>
+            <option disabled selected value="">--Select Student--</option>
+            <option value="5">Vitka</option>
+        </select> 
+        <span id="errorStudent" class="errors-text"></span>
+
+        <label for="dept">Select grade: <span class="required-field">*</span></label>
+         <select name="Grades" id="Grades" class="symbol-required" required>
+            <option disabled selected value="">--Select grade--</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select> 
+        <span id="errorStudent" class="errors-text"></span>
+
+        <label for="dept">Select Subject: <span class="required-field">*</span></label>
+        <select name="Subject" id="Subject" class="symbol-required" required>
+           <option disabled selected value="">--Select subject--</option>
+           <option value="5">Math</option>
+       </select> 
+       <span id="errorStudent" class="errors-text"></span>
+       
+       <label for="dept">Select Teacher: <span class="required-field">*</span></label>
+       <select name="Teacher" id="Teacher" class="symbol-required" required>
+          <option disabled selected value="">--Select Teacher--</option>
+          <option  value="5">Jamal</option>
+      </select> 
+      <span id="errorStudent" class="errors-text"></span>
+        
+        <div class="form-buttons">
+            <p id="errorsSummary"></p>
+            <input type="submit" class="form-button-submit" value="Add" />
+            <a href="./list.html" class="form-button-cancel">Cancel</a>
+        </div>
+    </form>
+    </main>
+    <!--Footer-->
+    <footer>
+      Illia, Solovko, s22460
+    </footer>
+  </body>
+</html>

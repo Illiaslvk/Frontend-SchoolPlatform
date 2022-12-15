@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Illia Solovko Dormitary DEMO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <!--Header and logo-->
+    <header>
+      <h1>Illia Solovko Dormitary DEMO</h1>
+      <img src="../../images/logo.png" alt="Illia Solovko Dormitary Demo" width="100" height="100">
+    </header>
+    
+    <!--Navigation-->
+    <nav>
+      <ul>
+        <li><a href="../index.html">Main Page</a></li>
+        <li><a href="./list.html" class="active">Teacher</a></li>
+        <li><a href="../Student/list.html">Student</a></li>
+        <li><a href="../Grades/list.html">Grades</a></li>
+      </ul>
+    </nav>
+    <!--Main contents-->
+    <main>
+      <h2>Teachers Information</h2>
+      <form class="form">
+        <label for="FirstName">First Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="FirstName" id="FirstName" class="error-input" required>
+        <span id="errorFirstName" class="errors-text">Field is required.</span>
+
+        <label for="LastName">Last Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="LastName" id="LastName" class="error-input" required>
+        <span id="errorLastName" class="errors-text">Field is required.</span>
+
+        <label for="Salary">Salary: <span class="symbol-required">*</span></label>
+        <input type="text" name="Salary" id="Salary" class="error-input" required>
+        <span id="errorSalary" class="errors-text">Field is required.</span>
+
+        <label for="indexNumber">indexNumber: <span class="symbol-required">*</span></label>
+        <input type="text" name="indexNumber" id="indexNumber" class="error-input" required>
+        <span id="errorindexNumber" class="errors-text">Field is required.</span>
+        
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text">Form contains errors.</p>
+            <input type="submit" class="form-button-submit" value="Add"/>
+            <a href="./list.html" class="form-button-cancel">Cancel</a>
+        </div>
+    </form>
+    </main>
+    <!--Footer-->
+    <footer>
+        Illia, Solovko, s22460
+    </footer>
+  </body>
+</html>
