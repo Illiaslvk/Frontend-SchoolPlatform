@@ -1,0 +1,337 @@
+/*!Styles shared by the entire site*/
+/*For the entire page*/
+html {
+    background-color: #ecf0f1;
+    font-family: sans-serif;
+}
+/*For the content of the page*/
+body {
+    min-width: 360px;
+}
+/*!Page template elements (header, nav, main, footer)*/
+/*Background color*/
+header,main,footer{
+    background-color: white;
+}
+
+/*Margins*/
+header,main,footer,nav{
+    margin: 1rem;
+}
+
+/*Specific formatting for the header and footer*/
+header,footer{
+    background-color: #663d33;
+    color: white;
+    padding: 1rem;
+}
+
+/*Header*/
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*Navigation*/
+nav{
+    background-color: #bdc3c7;
+}
+/*Adjust the list to be displayed as a horizontal menu*/
+nav ul{
+   display: flex;
+   padding: 0;
+   list-style-type: none;
+}
+/*Set the appropriate display for links*/
+nav ul li a{
+    display: inline-block;
+    color: #2c3e50;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+/*Set the behavior when you hover over a menu item*/
+nav ul li a:hover{
+    background-color: #da8888;
+    color: #ecf0f1;
+}
+/*A class to mark the menu item that is currently selected*/
+nav ul li a.active{
+    background-color: #95a5a6;
+    color: #ecf0f1;
+}
+/*Set the padding to move the content away from the border*/
+main{
+    padding: 1.5rem;
+}
+/*center the text displayed in the footer*/
+footer{
+    text-align: center;
+}
+/*!Record List*/
+/*Header of content section*/
+main h2{
+    border-bottom: 1px solid #7f8c8d;
+    margin-bottom: 2rem;
+}
+/*Table*/
+.table-list{
+    border-collapse: collapse;
+    color: #2c3e50;
+    width: 100%;
+}
+.table-list, .table-list th, .table-list td{
+    border: 1px solid #bdc3c7;
+}
+.table-list th, .table-list td{
+    padding: 0.5rem;
+}
+.table-list th, .table-list tbody tr:nth-child(even){
+    background-color: #ecf0f1;
+}
+/*Action Buttons*/
+.list-actions{
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+.list-actions li{
+    display: inline-block;
+}
+/*Details,Edit,Delete*/
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete{
+    display: inline-block;
+    width: 75px;
+    padding: 0.25rem 0.5rem;
+}
+
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete{
+    border: none;
+    border-radius: 5px;
+    color: rgb(11, 11, 12);
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+}
+/*spacing between buttons*/
+.list-actions-button-details,
+.list-actions-button-edit{
+    margin-right: 1rem;
+}
+/*properties specific to specific buttons*/
+.list-actions-button-details{
+    background-color: #2980b9;
+}
+.list-actions-button-details:hover{
+    background-color: #3498db;
+}
+.list-actions-button-edit{
+    background-color: #f39c12;
+}
+.list-actions-button-edit:hover{
+    background-color: #f1c40f;
+}
+.list-actions-button-delete{
+    background-color: #c0392b;
+}
+.list-actions-button-delete:hover{
+    background-color: #e74c3c;
+}
+/*Add new record button*/
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete,
+.button-add{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.button-add{
+    padding: 0.5rem 1rem;
+}
+.button-add{
+     background-color: #27ae60;
+}
+.button-add:hover{
+    background-color: #2ecc71;
+}
+
+
+/*Fields*/
+button,input,select,textarea{
+    font-family: inherit;
+    font-size: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 150px 300px 1fr;
+    gap: 1rem;
+}
+.form select,
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"],
+.form input[type="email"]{
+    border: 1px solid #7f8c8d;
+    color: #2c3e50;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 100%;
+}
+.form label{
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+/* appearance for the * symbol indicating the requirement of the field:*/
+.symbol-required{
+    color: #c0392b;
+}
+/*Buttons*/
+
+.form-buttons{
+    grid-column: 1 / span 2;
+}
+.list-actions-button-details,
+.list-actions-button-edit,
+.list-actions-button-delete,
+.button-add,
+.form-button-submit,
+.form-button-cancel{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.button-add,
+.form-button-submit,
+.form-button-cancel{
+    padding: 0.5rem 1rem;
+}
+.button-add,
+.form-button-submit{
+    background-color: #27ae60;
+}
+.button-add:hover,
+.form-button-submit:hover{
+    background-color: #2ecc71;
+}
+.form-button-cancel,
+.list-actions-button-delete{
+    background-color: #c0392b;
+}
+.form-button-cancel:hover,
+.list-actions-button-delete:hover{
+    background-color: #e74c3c;
+}
+.form-button-submit,
+.form-button-cancel{
+    width: 100%;
+}
+.form-button-cancel{
+    box-sizing: border-box;
+    display: block;
+}
+.form-button-submit{
+    margin-bottom: 0.5rem;
+}
+/*Form validation errors*/
+.form input.error-input,
+.form select.error-input{
+    border: 3px solid #e74c3c;
+}
+.errors-text{
+    display: block;
+    font-size: 0.85em;
+    line-height: 2.25rem;
+    margin-top: 0.5em;
+    color: #e74c3c;
+}
+.errors-text,
+.symbol-required{
+    color: #c0392b;
+}
+
+@media all and (max-width: 720px){
+    header{
+        flex-direction: column;
+    }
+    header h1{
+        text-align: center;
+    }
+    header img{
+        align-self: center;
+    }
+}
+@media all and (max-width: 400px){
+body,nav,nav ul,header, main, footer{
+    margin: 0;
+}
+}
+@media all and (max-width: 720px){
+    nav ul{
+        flex-wrap: wrap;
+    }
+    nav  ul li{
+        flex-basis: 50%;
+        text-align: center;
+    }
+    nav ul li a{
+        display: block;
+    }
+}
+@media all and (max-width: 400px){
+    nav ul li{
+        flex-basis: 100%;
+    }
+}
+@media all and (max-width: 720px){
+    .form{
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+    .form-buttons{
+        grid-column: 1/1;
+    }
+}
+/*fix delete*/
+@media all and (max-width: 720px){
+    .list-actions-button-delete{
+        margin-right: 15px;
+    }
+}
+
+	
+@media only screen and (max-width: 720px){
+	    thead, tbody,th, td { 
+		    display: block;
+            text-align: right;
+	}
+    thead tr { 
+		position: absolute;
+		right: auto;
+	}
+    .list-actions{
+        margin-left: 150px;
+    }
+    .info-details{
+      margin-left:120px;
+    }
+    
+} 
+

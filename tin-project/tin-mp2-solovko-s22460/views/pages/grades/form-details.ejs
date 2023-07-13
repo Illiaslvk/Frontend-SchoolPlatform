@@ -1,0 +1,39 @@
+<%- include('../../fragment/header.ejs') %>
+
+    <main>
+      <h2>Grade Information</h2>
+      <form class="form">
+        <label for="StudentName">StudentName: </label>
+         <select name="StudentName" id="StudentName" disabled>
+            <option value="">--StudentName--</option>
+            <option selected value="5">Vitka</option>
+        </select> 
+        <span id="errorGrade" class="errors-text"></span>
+
+        <label for="TeacherName">TeacherName: </label>
+         <select name="TeacherName" id="TeacherName" disabled>
+            <option value="">--TeacherName--</option>
+            <option selected value="5">Jamal</option>
+        </select> 
+        <span id="errorGrade" class="errors-text"></span>
+
+        <label for="PESEL">PESEL: </label>
+        <input type="text" name="PESEL" id="PESEL" value="993" disabled>
+        <span id="errorPESEL" class="errors-text"></span>
+
+        <label for="Subject">Subject: </label>
+        <input type="text" name="Subject" id="Subject" value="Math" disabled>
+        <span id="errorSubject" class="errors-text"></span>
+
+        <label for="Grade">Grade: </label>
+        <input type="text" name="Grade" id="Grade" value="5" disabled>
+        <span id="errorGrade" class="errors-text"></span>
+        
+        <div class="form-buttons">
+          <a href="/grades" class="list-actions-button-details">Back</a>
+          <a href="/grades/invalid" class="list-actions-button-edit">Edit</a>
+      </div>
+    </form>
+    </main>
+
+<%- include('../../fragment/footer.ejs') %>

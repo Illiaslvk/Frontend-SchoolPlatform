@@ -1,0 +1,58 @@
+{
+  "main-page": {
+    "content": "Strona główna"
+  },
+  "nav": {
+    "main-page": "Strona główna",
+    "student": "Student",
+    "teacher": "Nauczyciel",
+    "grades": "Oceny"
+  },
+  "list": {
+    "actions": {
+      "title": "Akcje",
+      "details": "Szczegóły",
+      "edit": "Edytuj",
+      "delete": "Usuń"
+    }
+  },
+  "form": {
+    "actions": {
+      "return": "Powrót",
+      "edit": "Edytuj",
+      "cancel": "Anuluj"
+    }
+  },
+  "student": {
+    "fields": {
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "email": "Email"
+    },
+    "list": {
+      "title": "Studenty",
+      "addNew": "Dodaj nowego studenta",
+      "noData": "Brak studentów w bazie",
+      "pageTitle": "Lista studentów"
+    },
+    "form": {
+      "grades": "Historia ocen",
+      "add": {
+        "pageTitle": "Dodawanie studenta",
+        "btnLabel": "Dodaj oceny",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie dodano studenta"
+        }
+      },
+      "edit": {
+        "pageTitle": "Edycja studenta",
+        "btnLabel": "Zapisz zmiany",
+        "confirm": {
+          "header": "Potwierdzenie operacji",
+          "text": "Pomyślnie zaktualizowano studenta"
+        }
+      }
+    }
+  }
+}

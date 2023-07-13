@@ -1,0 +1,38 @@
+<%- include('../../fragment/header.ejs') %>
+
+<main>
+    <h2>Teachers Information</h2>
+    <table class="table-list">
+        <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>indexNumber</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (let teacher of teachers) { %>
+            <tr>
+                <td><%= teacher.firstName %></td>
+                <td><%= teacher.indexNumber %></td>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="/teacher/details/<%= teacher._id %>" class="list-actions-button-details">Details</a>
+                        </li>
+                        <li>
+                            <a href="/teacher/edit/<%= teacher._id %>" class="list-actions-button-edit"> Edit</a>
+                        </li>
+                        <li>
+                            <a href="/teacher/delete/<%= teacher._id %>" class="list-actions-button-delete">Delete</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <p><a href="/teacher/add" class="button-add">Add new Teacher</a></p>
+</main>
+
+<%- include('../../fragment/footer.ejs') %>

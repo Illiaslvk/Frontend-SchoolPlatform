@@ -1,0 +1,40 @@
+<%- include('../../fragment/header.ejs') %>
+
+    <main>
+      <h2>Grade Edit</h2>
+      <form class="form">
+        <label for="StudentName">StudentName: <span class="symbol-required">*</span></label>
+         <select name="StudentName" id="StudentName" class="error-input" required>
+            <option selected value="">--StudentName--</option>
+            <option value="5">Vitka</option>
+        </select> 
+        <span id="errorGrade" class="errors-text">Field is required.</span>
+
+        <label for="TeacherName">TeacherName: <span class="symbol-required">*</span></label>
+         <select name="TeacherName" id="TeacherName" class="error-input" required>
+            <option selected value="">--TeacherName--</option>
+            <option value="5">Jamal</option>
+        </select> 
+        <span id="errorGrade" class="errors-text">Field is required.</span>
+        
+        <label for="PESEL">PESEL: <span class="symbol-required">*</span></label>
+        <input type="text" name="PESEL" id="PESEL" class="error-input" required>
+        <span id="errorPESEL" class="errors-text">Field is required.</span>
+
+        <label for="Subject">Subject: <span class="symbol-required">*</span></label>
+        <input type="text" name="Subject" id="Subject" class="error-input" required>
+        <span id="errorSubject" class="errors-text">Field is required.</span>
+
+        <label for="Grade">Grade: <span class="symbol-required">*</span></label>
+        <input type="text" name="Grade" id="Grade" class="error-input" required>
+        <span id="errorGrade" class="errors-text">Field is required.</span>
+        
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text">Form contains errors.</p>
+            <input type="submit" class="form-button-submit" value="Add"/>
+            <a href="/grades/details" class="form-button-cancel">Cancel</a>
+        </div>
+    </form>
+    </main>
+
+<%- include('../../fragment/footer.ejs') %>

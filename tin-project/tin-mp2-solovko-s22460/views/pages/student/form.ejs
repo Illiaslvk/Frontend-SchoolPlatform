@@ -1,0 +1,97 @@
+<%- include('../../fragment/header.ejs') %>
+
+<main>
+    <script type="application/javascript" src="/js/validationStudentForm.js"></script> <!-- Added -->
+    <script type="application/javascript" src="/js/validationCommon.js"></script> <!-- Added -->
+    <h2><%= pageTitle %></h2>
+
+    <form class="form" method="post" action="<%=formAction%>" novalidate >
+
+        <input type="hidden" name="_id" value="<%= student._id %>">
+
+        <label for="pesel">Pesel: <span class="symbol-required">*</span></label>
+        <input type="text" name="pesel" id="pesel" placeholder=" "
+               value="<%= student.pesel %>" required class="<%= validationErrors.find(e=> e.path.includes('pesel')) ? 'error-input' : '' %>"
+                <%=(formMode=='showDetails' ) ? 'disabled' : '' %> />
+        <span id="errorStudentPesel" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('pesel'))) { %>
+                <%= validationErrors.find(e => e.path.includes('pesel')).message %>
+            <% } %>
+        </span>
+
+        <label for="firstName">First Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="firstName" id="firstName" placeholder="3 to 20 characters"
+               value="<%= student.firstName %>" required class="<%= validationErrors.find(e=> e.path.includes('firstName')) ? 'error-input' : '' %>"
+                <%=(formMode=='showDetails' ) ? 'disabled' : '' %> />
+        <span id="errorFirstName" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('firstName'))) { %>
+                <%= validationErrors.find(e => e.path.includes('firstName')).message %>
+            <% } %>
+        </span>
+
+        <label for="lastName">Last Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="lastName" id="lastName" placeholder="3 to 20 characters"
+               value="<%= student.lastName %>" required class="<%= validationErrors.find(e=> e.path.includes('lastName')) ? 'error-input' : '' %>"
+                <%=(formMode=='showDetails' ) ? 'disabled' : '' %> />
+        <span id="errorLastName" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('lastName'))) { %>
+                <%= validationErrors.find(e => e.path.includes('lastName')).message %>
+            <% } %>
+        </span>
+
+        <label for="email">Student email: <span class="symbol-required">*</span></label>
+        <input type="email" name="email" id="email" placeholder="name@domain.pl"
+               value="<%= student.email %>" required class="<%= validationErrors.find(e=> e.path.includes('email')) ? 'error-input' : '' %>"
+                <%=(formMode=='showDetails' ) ? 'disabled' : '' %> />
+        <span id="errorStudentEmail" class="errors-text">
+            <% if (validationErrors.find(e=> e.path.includes('email'))) { %>
+                <%= validationErrors.find(e=> e.path.includes('email')).message %>
+            <% } %>
+        </span>
+
+        <% if (formMode == 'showDetails') { %>
+            <div>
+                <a class="list-actions-button-edit" href="/student/edit/<%= student._id %>">Edit</a>
+            </div>
+        <% } %>
+
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+            <a class="form-button-cancel" href="/student">Cancel</a>
+            <% } else { %>
+                <a class="form-button-cancel" href="/student">Return</a>
+            <% } %>
+        </div>
+    </form>
+
+    <% if (formMode == 'showDetails' ) { %>
+        <h2>Grades details</h2>
+
+        <table class="table-list">
+            <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Grade</th>
+                <th>TeacherName</th>
+                <th>TeacherLastName</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <% for (let p of student.grades) { %>
+                <tr>
+                    <td><%= p.subject %></td>
+                    <td><%= p.grade %></td>
+                    <td><a href="/teacher/details/<%= p.teacher._id %>"><%= p.teacher.firstName %></a></td>
+                    <td><a href="/teacher/details/<%= p.teacher._id %>"><%= p.teacher.lastName %></a></td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    <% } %>
+
+</main>
+
+<%- include('../../fragment/footer.ejs') %>

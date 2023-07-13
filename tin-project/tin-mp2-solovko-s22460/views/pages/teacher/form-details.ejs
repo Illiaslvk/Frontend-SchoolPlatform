@@ -1,0 +1,53 @@
+<%- include('../../fragment/header.ejs') %>
+
+    <main>
+      <h2>Teachers Information</h2>
+      <form class="form">
+        <label for="FirstName" >First Name: </label>
+        <input type="text" name="FirstName" id="FirstName" value="Jamal" disabled>
+        <span id="errorFirstName" class="errors-text"></span>
+        
+        <label for="LastName">Last Name: </label>
+        <input type="text" name="LastName" id="LastName" value="Older" disabled>
+        <span id="errorLastName" class="errors-text"></span>
+
+        <label for="Salary">Salary: </label>
+        <input type="text" name="Salary" id="Salary" value="500" disabled>
+        <span id="errorSalary" class="errors-text"></span>
+
+        <label for="indexNumber">indexNumber: </label>
+        <input type="text" name="indexNumber" id="indexNumber" value="0000" disabled>
+        <span id="errorindexNumber" class="errors-text"></span>
+        
+        <div class="form-buttons">
+            <a href="/teacher/invalid"
+            class="list-actions-button-edit">Edit</a>
+        </div>
+    </form>
+
+    <h2>Given Grades</h2>
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                    <th>StudentName</th>
+                    <th>StudentLastName</th>
+                </tr>
+            </thead>
+            <tbody class="info-details">
+                <tr>
+                    <td>Math</td>
+                    <td>5</td>
+                    <td>Vitka</td>
+                    <td>Flexer</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-buttons">
+            <a href="/teacher" class="list-actions-button-details">Back</a>
+        </div>
+
+    </main>
+
+<%- include('../../fragment/footer.ejs') %>

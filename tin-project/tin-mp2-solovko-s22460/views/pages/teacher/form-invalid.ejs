@@ -1,0 +1,30 @@
+<%- include('../../fragment/header.ejs') %>
+
+    <main>
+      <h2>Teachers Information</h2>
+      <form class="form">
+        <label for="FirstName">First Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="FirstName" id="FirstName" class="error-input" required>
+        <span id="errorFirstName" class="errors-text">Field is required.</span>
+
+        <label for="LastName">Last Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="LastName" id="LastName" class="error-input" required>
+        <span id="errorLastName" class="errors-text">Field is required.</span>
+
+        <label for="Salary">Salary: <span class="symbol-required">*</span></label>
+        <input type="text" name="Salary" id="Salary" class="error-input" required>
+        <span id="errorSalary" class="errors-text">Field is required.</span>
+
+        <label for="indexNumber">indexNumber: <span class="symbol-required">*</span></label>
+        <input type="text" name="indexNumber" id="indexNumber" class="error-input" required>
+        <span id="errorindexNumber" class="errors-text">Field is required.</span>
+        
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text">Form contains errors.</p>
+            <input type="submit" class="form-button-submit" value="Add"/>
+            <a href="/teacher/details" class="form-button-cancel">Cancel</a>
+        </div>
+    </form>
+    </main>
+
+<%- include('../../fragment/footer.ejs') %>

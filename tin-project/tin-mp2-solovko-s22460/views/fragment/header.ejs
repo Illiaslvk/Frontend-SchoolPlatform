@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Illia Solovko Dormitary DEMO</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<!--Header and logo-->
+<header>
+    <h1>Illia Solovko Dormitary DEMO</h1>
+    <img src="/images/logo.png" alt="Illia Solovko Dormitary Demo" width="100" height="100">
+</header>
+<!--Navigation-->
+<nav>
+    <ul>
+        <li><a href="/" class="<%= navLocation == 'main' ? 'active' : ''%>">Main page</a></li>
+        <li><a href="/teacher" class="<%= navLocation == 'teacher' ? 'active' : ''%>">Teacher</a></li>
+        <li><a href="/student" class="<%= navLocation == 'student' ? 'active' : ''%>">Student</a></li>
+        <li><a href="/grades" class="<%= navLocation == 'grades' ? 'active' : ''%>">Grades</a></li>
+    </ul>
+</nav>

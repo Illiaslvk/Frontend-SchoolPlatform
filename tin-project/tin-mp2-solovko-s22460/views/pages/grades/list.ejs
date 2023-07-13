@@ -1,0 +1,38 @@
+<%- include('../../fragment/header.ejs') %>
+
+<main>
+    <h2>Grades Information</h2>
+    <table class="table-list">
+        <thead>
+        <tr>
+            <th>Student</th>
+            <th>Grade</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (let grade of grades) { %>
+        <tr>
+            <td><%= grade.student.firstName %></td>
+            <td><%= grade.grade %></td>
+            <td>
+                <ul class="list-actions">
+                    <li>
+                        <a href="/grades/details/<%= grade._id %>" class="list-actions-button-details">Details</a>
+                    </li>
+                    <li>
+                        <a href="/grades/edit/<%= grade._id %>" class="list-actions-button-edit">Edit</a>
+                    </li>
+                    <li>
+                        <a href="/grades/delete/<%= grade._id %>" class="list-actions-button-delete">Delete</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <p><a href="/grades/add" class="button-add">Add new Grade</a></p>
+</main>
+
+<%- include('../../fragment/footer.ejs') %>

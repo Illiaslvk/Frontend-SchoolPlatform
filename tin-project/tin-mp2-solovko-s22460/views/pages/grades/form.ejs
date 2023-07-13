@@ -1,0 +1,108 @@
+<%- include('../../fragment/header.ejs') %>
+<main>
+    <script type="application/javascript" src="/js/validationGradesForm.js"></script> <!-- Added -->
+    <script type="application/javascript" src="/js/validationCommon.js"></script> <!-- Added -->
+    <h2><%= pageTitle %></h2>
+
+    <form class="form" method="post" action="<%= formAction %>" onsubmit="return validateForm()" novalidate>
+
+        <input type="hidden" name="_id" value="<%= grade._id %>">
+
+        <label for="idStudent">Select Student: <span class="required-field">*</span></label>
+        <select id="idStudent" name="idStudent" required class="<%= validationErrors.find(e=> e.path.includes('idStudent')) ? 'error-input' : '' %>"
+                <%=(formMode=='showDetails' ) ? 'disabled' : '' %> >
+            <% if (formMode != 'edit' ){ %>
+                <option value="" selected="selected">--Select Student--</option>
+            <% } %>
+
+            <% for (let i = 0; i < allStudents.length; i++) {let student = allStudents[i]; %>
+            <option value="<%= student._id %>" label="<%= student.firstName + ' ' + student.lastName %>"
+                    <%= (grade._id && student._id.toString() == grade.student._id.toString()) ? 'selected' : '' %>>
+            </option>
+            <% } %>
+        </select>
+        <span id="errorStudent" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('idStudent'))) {%>
+                <%= validationErrors.find(e => e.path.includes('idStudent')).message %>
+            <% } %>
+        </span>
+
+        <label for="grade">Select grade: <span class="required-field">*</span></label>
+        <select id="grade" name="grade" required class="<%= validationErrors.find(e=> e.path.includes('grade')) ? 'error-input' : '' %>"
+                <%=(formMode=='showDetails' ) ? 'disabled' : '' %> >
+            <% if (formMode != 'edit' ){ %>
+                <option selected="selected" value="">--Select grade--</option>
+            <% } %>
+            <% for(let grd of ["1", "2", "3", "4", "5"]) { %>
+                <% if (grade.grade === grd){ %> 
+                    <option selected value="<%= grd %>"><%= grd %></option>
+                <% } else { %>
+                    <option value="<%= grd %>"><%= grd %></option>
+                <% } %>
+            <% } %>
+        </select>
+        <span id="errorGrade" class="errors-text" >
+            <% if (validationErrors.find(e => e.path.includes('grade'))) {%>
+                <%= validationErrors.find(e => e.path.includes('grade')).message %>
+            <% } %>
+        </span>
+
+        <label for="subject">Select Subject: <span class="required-field">*</span></label>
+        <select id="subject" name="subject" required class="<%= validationErrors.find(e=> e.path.includes('subject')) ? 'error-input' : '' %>"
+                <%=(formMode=='showDetails' ) ? 'disabled' : '' %> >
+            <% if (formMode !== 'edit' ){ %>
+                <option selected="selected" value="">--Select subject--</option>
+            <% } %>
+            <% for(let subj of ['PE', 'MAD', 'ASD']) { %>
+                <% if (grade.subject === subj){ %>
+                <option selected value="<%= subj %>"><%= subj %></option>
+                <% } else { %>
+                <option value="<%= subj %>"><%= subj %></option>
+                <% } %>
+            <% } %>
+        </select>
+        <span id="errorSubject" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('subject'))) {%>
+                <%= validationErrors.find(e => e.path.includes('subject')).message %>
+            <% } %>
+        </span>
+
+        <label for="idTeacher">Select Teacher: <span class="required-field">*</span></label>
+        <select id="idTeacher" name="idTeacher" required class="<%= validationErrors.find(e=> e.path.includes('idTeacher')) ? 'error-input' : '' %>"
+                <%=(formMode=='showDetails' ) ? 'disabled' : '' %> >
+            <% if (formMode != 'edit' ){ %>
+                <option value="" selected="selected">--Select Teacher--</option>
+            <% } %>
+
+            <% for (let i = 0; i < allTeachers.length; i++) {let teacher = allTeachers[i]; %>
+            <option value="<%= teacher._id %>" label="<%= teacher.firstName + ' ' + teacher.lastName %>"
+                    <%= (grade._id && teacher._id.toString() == grade.teacher._id.toString()) ? 'selected' : '' %>></option>
+            <% } %>
+        </select>
+        <span id="errorTeacher" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('idTeacher'))) {%>
+                <%= validationErrors.find(e => e.path.includes('idTeacher')).message %>
+            <% } %>
+        </span>
+
+        <% if (formMode == 'showDetails') { %>
+            <div>
+                <a class="list-actions-button-edit" href="/grades/edit/<%= grade._id %>">Edit</a>
+            </div>
+        <% } %>
+
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <% if (formMode != 'showDetails') { %>
+                <input class="form-button-submit" type="submit" value="<%= btnLabel %>"/>
+                <a class="form-button-cancel" href="/grades">Cancel</a>
+            <% } else { %>
+                <a class="form-button-cancel" href="/grades">Return</a>
+            <% } %>
+        </div>
+    </form>
+
+
+</main>
+
+<%- include('../../fragment/footer.ejs') %>

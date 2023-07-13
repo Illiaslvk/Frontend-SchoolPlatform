@@ -1,0 +1,29 @@
+<%- include('../../fragment/header.ejs') %>
+
+    <main>
+      <h2>Edit Teacher</h2>
+      <form class="form">
+        <label for="FirstName">First Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="FirstName" id="FirstName" value="Jamal" placeholder="3 to 20 characters" required>
+        <span id="errorFirstName" class="errors-text"></span>
+        
+        <label for="LastName">Last Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="LastName" id="LastName" value="Older" placeholder="3 to 20 characters" required>
+        <span id="errorLastName" class="errors-text"></span>
+
+        <label for="Salary">Salary: <span class="symbol-required">*</span></label>
+        <input type="text" name="Salary" id="Salary" value="500" placeholder="1 to 20 digits" required>
+        <span id="errorSalary" class="errors-text"></span>
+
+        <label for="indexNumber">indexNumber: <span class="symbol-required">*</span></label>
+        <input type="text" name="indexNumber" id="indexNumber" value="0000" placeholder="1 to 20 digits" required>
+        <span id="errorindexNumber" class="errors-text"></span>
+        
+        <div class="form-buttons">
+            <input type="submit" class="form-button-submit" value="Save changes" />
+            <a href="/teacher" class="form-button-cancel">Cancel</a>
+        </div>
+    </form>
+    </main>
+
+<%- include('../../fragment/footer.ejs') %>

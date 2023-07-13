@@ -1,0 +1,30 @@
+<%- include('../../fragment/header.ejs') %>
+
+    <main>
+      <h2>Edit Student</h2>
+      <form class="form">
+        <label for="studentPesel">Student Pesel: <span class="symbol-required">*</span></label>
+        <input type="text" name="studentPesel" id="studentPesel" value="993" placeholder="1 to 20 digits" required>
+        <span id="errorStudentId" class="errors-text"></span>
+
+        <label for="FirstName">First Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="FirstName" id="FirstName" value="Vitka" placeholder="3 to 20 characters" required>
+        <span id="errorFirstName" class="errors-text"></span>
+        
+        <label for="FirstName">Last Name: <span class="symbol-required">*</span></label>
+        <input type="text" name="LastName" id="LastName" value="Flexer" placeholder="3 to 20 characters" required>
+        <span id="errorLastName" class="errors-text"></span>
+
+        <label for="email">Student email: <span class="symbol-required">*</span></label>
+        <input type="email" name="email" id="email" value="VitkaFlexer@gmail.com" placeholder="name@domain.pl" required>
+        <span id="errorStudentEmail" class="errors-text"></span>
+        
+        <div class="form-buttons">
+            <p id="errorsSummary"></p>
+            <input type="submit" class="form-button-submit" value="Save changes"/>
+            <a href="/student" class="form-button-cancel">Cancel</a>
+        </div>
+    </form>
+    </main>
+
+<%- include('../../fragment/footer.ejs') %>

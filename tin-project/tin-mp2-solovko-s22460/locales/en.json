@@ -1,0 +1,61 @@
+{
+  "main-page": {
+    "content": "Main page"
+  },
+  "nav": {
+    "main-page": "Main page",
+    "student": "Student",
+    "teacher": "Teacher",
+    "grades": "Grades"
+  },
+  "list": {
+    "actions": {
+      "title": "Actions",
+      "details": "Details",
+      "edit": "Edit",
+      "delete": "Delete"
+    }
+  },
+  "form": {
+    "actions": {
+      "return": "Return",
+      "edit": "Edit",
+      "cancel": "Cancel"
+    }
+  },
+  "student": {
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email"
+    },
+    "list": {
+      "title": "Student",
+      "addNew": "Add new Student",
+      "noData": "No students in database",
+      "pageTitle": "List of Students"
+    },
+    "form": {
+      "grades": "History of Grades",
+      "add": {
+        "pageTitle": "Add Student",
+        "btnLabel": "Add Grade",
+        "confirm": {
+          "header": "Confirmation",
+          "text": "The new student has been successfully created"
+        }
+      },
+      "edit": {
+        "pageTitle": "Edit Student",
+        "btnLabel": "Save changes",
+        "confirm": {
+          "header": "Confirmation",
+          "text": "The student has been successfully updated"
+        }
+      },
+      "details": {
+        "pageTitle": "Student Details"
+      }
+    }
+  }
+}
